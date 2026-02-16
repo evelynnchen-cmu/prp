@@ -84,7 +84,6 @@
 │   ├── baseline_enhanced_comparison.csv
 │   ├── eval_report_data.json
 │   └── representative_failure_cases.json
-├── view_query_result.py        # Helper script to view query results
 └── requirements.txt
 ```
 
@@ -170,10 +169,9 @@ All citations resolve to:
 2. `source_id` in `data/data_manifest.json` → paper metadata + DOI
 
 **Verification:**
-Use `view_query_result.py` to view complete query results with full chunk text:
-```bash
-python view_query_result.py [query_id]
-```
+To verify a citation, extract `(source_id, chunk_id)` from the answer and:
+1. Find chunk in `data/processed/chunks.jsonl` using grep or JSON parsing
+2. Find source metadata in `data/data_manifest.json`
 
 ## Evaluation
 
@@ -392,15 +390,6 @@ result = pipeline.query("your query", k=5, enhance=True)
    - Shows side-by-side comparison
    - Compares citation counts, validation status, and answer length
    - Useful for understanding the difference between modes
-
-**View Query Result:**
-```bash
-# View any query result with full chunk text for verification
-python view_query_result.py [query_id]
-
-# View first result (default)
-python view_query_result.py
-```
 
 **Compare Evaluations:**
 ```bash

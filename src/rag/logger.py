@@ -24,7 +24,7 @@ class QueryLogger:
                     'chunk_id': c['chunk_id'],
                     'source_id': c['source_id'],
                     'similarity_score': c.get('similarity_score'),
-                    'text_preview': c['text'][:200]  # First 200 chars
+                    'text': c['text'] 
                 }
                 for c in result['retrieved_chunks']
             ],

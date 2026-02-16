@@ -50,7 +50,7 @@ def run_evaluation(
     for i, q in enumerate(queries, 1):
         print(f"\n[{i}/{len(queries)}] Processing: {q['id']}")
         
-        result = pipeline.query(q['query'], k=5, log=False, enhance=enhance)
+        result = pipeline.query(q['query'], k=5, log=True, enhance=enhance)
         result['query_id'] = q['id']
         result['category'] = q['category']
         result['phase1_task'] = q.get('phase1_task', 'general')
