@@ -7,7 +7,7 @@
    pip install -r requirements.txt
    ```
 
-2. **Set API key:**
+2. **Set API key:** (key provided in Canvas comments, please reach out if running into issues regarding this key or feel free to use your own)
    ```bash
    # Create .env file with your OpenAI API key
    echo "OPENAI_API_KEY=your_key_here" > .env
@@ -434,15 +434,3 @@ To verify a citation:
    ```bash
    grep "\"id\": \"{source_id}\"" data/data_manifest.json
    ```
-
-## Evaluation Report Data
-
-All data needed for the evaluation report is available in:
-- `outputs/eval_report_data.json` - Summary metrics
-- `outputs/baseline_enhanced_comparison.csv` - Detailed comparison
-- `outputs/representative_failure_cases.json` - 3 failure cases with full details
-
-Use these files to write the evaluation report with:
-- Aggregate metrics comparison
-- Category and Phase1 task breakdowns
-- Failure case analysis with evidence

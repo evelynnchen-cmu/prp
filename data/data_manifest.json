@@ -73,7 +73,7 @@
     },
     {
       "id": "zuraikat2024consistency",
-      "title": "Sleep regularity and mortality: a prospective analysis in the UK Biobank",
+      "title": "Consistency is key: sleep regularity predicts all-cause mortality",
       "authors": "Faris M. Zuraikat, Brooke Aggarwal, Sanja Jelic, Marie-Pierre St-Onge",
       "year": 2024,
       "source_type": "peer-reviewed journal article",
@@ -113,7 +113,7 @@
       "authors": "Gholami Fatemeh, Moradi Sajjad, Rasaei Niluofar, Soveid Neda, Setayesh Leila, Mirzaei Khadijeh",
       "year": 2021,
       "source_type": "systematic review and meta-analysis",
-      "link_or_DOI": "https://doi.org/10.1093/nutrit/nuaa084",
+      "link_or_DOI": "https://link.springer.com/article/10.1007/s00415-020-10381-w",
       "relevance_note": "Meta-analysis of randomized controlled trials indicating melatonin significantly improves sleep quality (e.g., PSQI scores) compared with control."
     },
     {
@@ -122,7 +122,7 @@
       "authors": "Katherine A. Maki, Li Yang, Nicole L. Farmer, Shreya Papneja, Gwenyth R. Wallen, Jennifer L. Barb",
       "year": 2025,
       "source_type": "peer-reviewed journal article",
-      "link_or_DOI": "https://doi.org/10.1016/j.sleep.2024.12.027",
+      "link_or_DOI": "https://doi.org/10.1016/j.nbscr.2025.100133",
       "relevance_note": "Shows that lower sleep regularity and shorter sleep are linked to higher depression scores, with stronger effects in women and those using tobacco/cannabis."
     },
     {
@@ -131,7 +131,7 @@
       "authors": "Colleen E. Carney, Jack D. Edinger, Maragatha Kuchibhatla, Angela M. Lachowski, Olya Bogouslavsky, Andrew D. Krystal, Colin M. Shapiro",
       "year": 2017,
       "source_type": "randomized controlled trial",
-      "link_or_DOI": "https://doi.org/10.5665/sleep.6596",
+      "link_or_DOI": "http://dx.doi.org/10.1093/sleep/zsx019",
       "relevance_note": "Randomized trial demonstrating that CBT for insomnia combined with antidepressant medication improves both objective sleep and depression outcomes in comorbid patients."
     },
     {
