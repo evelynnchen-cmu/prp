@@ -7,7 +7,7 @@
    pip install -r requirements.txt
    ```
 
-<!-- 2. **Set API key:**
+2. **Set API key:**
    ```bash
    # Create .env file with your OpenAI API key
    echo "OPENAI_API_KEY=your_key_here" > .env
@@ -15,19 +15,19 @@
    Or export it:
    ```bash
    export OPENAI_API_KEY=your_key_here
-   ``` -->
+   ```
 
-2. **Run ingestion pipeline:**
+3. **Run ingestion pipeline:**
    ```bash
    python -m src.ingest.pipeline
    ```
 
-3. **Build vector index:**
+4. **Build vector index:**
    ```bash
    python -m src.rag.build_index
    ```
 
-4. **Query the system:**
+5. **Query the system:**
    ```bash
    # Baseline mode (default)
    ./run_query.sh "How does sleep duration affect mental health?"
