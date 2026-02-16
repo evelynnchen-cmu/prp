@@ -4,5 +4,6 @@
     "direct": 10,
     "synthesis": 5,
     "edge_case": 5
-  }
+  },
+  "enhanced": false
 }

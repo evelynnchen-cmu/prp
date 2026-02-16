@@ -1,127 +1,128 @@
 {
   "overall_metrics": {
     "baseline": {
-      "citation_precision": 0.7973809523809524,
-      "groundedness": 3.5,
-      "answer_relevance": 3.6,
-      "avg_citations": 4.35
+      "citation_precision": 0.7763690476190476,
+      "groundedness": 3.4,
+      "answer_relevance": 3.575,
+      "avg_citations": 4.3
     },
     "enhanced": {
-      "citation_precision": 0.79,
-      "groundedness": 3.6,
-      "answer_relevance": 3.75,
-      "avg_citations": 3.8
+      "citation_precision": 0.7849999999999999,
+      "groundedness": 3.575,
+      "answer_relevance": 3.725,
+      "avg_citations": 3.95
     }
   },
   "improvements": {
     "citation_precision": {
-      "absolute": -0.007380952380952377,
-      "percent": -0.925649447596297
+      "absolute": 0.00863095238095235,
+      "percent": 1.1117074292724027
     },
     "groundedness_score": {
-      "absolute": 0.10000000000000009,
-      "percent": 2.85714285714286
+      "absolute": 0.17500000000000027,
+      "percent": 5.14705882352942
     },
     "answer_relevance": {
       "absolute": 0.1499999999999999,
-      "percent": 4.166666666666664
+      "percent": 4.195804195804193
     }
   },
   "metrics_by_category": {
     "baseline": {
       "direct": {
-        "citation_precision": 0.9147619047619047,
-        "groundedness_score": 3.6,
-        "answer_relevance": 3.6,
-        "total_citations": 4.5
+        "citation_precision": 0.8502380952380953,
+        "groundedness_score": 3.45,
+        "answer_relevance": 3.55,
+        "total_citations": 4.35
       },
       "edge_case": {
-        "citation_precision": 0.52,
+        "citation_precision": 0.51,
         "groundedness_score": 3.4,
         "answer_relevance": 3.4,
         "total_citations": 2.4
       },
       "synthesis": {
-        "citation_precision": 0.8400000000000001,
-        "groundedness_score": 3.4,
+        "citation_precision": 0.8949999999999999,
+        "groundedness_score": 3.3,
         "answer_relevance": 3.8,
-        "total_citations": 6.0
+        "total_citations": 6.1
       }
     },
     "enhanced": {
       "direct": {
-        "citation_precision": 0.89,
-        "groundedness_score": 3.5,
-        "answer_relevance": 3.7,
+        "citation_precision": 0.85,
+        "groundedness_score": 3.45,
+        "answer_relevance": 3.6,
         "total_citations": 3.8
       },
       "edge_case": {
         "citation_precision": 0.5,
-        "groundedness_score": 3.8,
-        "answer_relevance": 3.8,
-        "total_citations": 1.8
+        "groundedness_score": 3.9,
+        "answer_relevance": 3.9,
+        "total_citations": 1.9
       },
       "synthesis": {
-        "citation_precision": 0.8800000000000001,
-        "groundedness_score": 3.6,
+        "citation_precision": 0.9400000000000001,
+        "groundedness_score": 3.5,
         "answer_relevance": 3.8,
-        "total_citations": 5.8
+        "total_citations": 6.3
       }
     }
   },
   "metrics_by_phase1_task": {
     "baseline": {
       "CEE": {
-        "citation_precision": 0.9666666666666667,
-        "groundedness_score": 3.3333333333333335,
-        "answer_relevance": 3.3333333333333335,
-        "total_citations": 4.0
+        "citation_precision": 0.85,
+        "groundedness_score": 3.25,
+        "answer_relevance": 3.25,
+        "total_citations": 3.75
       },
       "CSS": {
         "citation_precision": 1.0,
-        "groundedness_score": 3.5,
+        "groundedness_score": 3.375,
         "answer_relevance": 4.0,
-        "total_citations": 6.25
+        "total_citations": 6.5
       },
       "general": {
-        "citation_precision": 0.6147619047619048,
-        "groundedness_score": 3.6,
+        "citation_precision": 0.6427380952380952,
+        "groundedness_score": 3.5,
         "answer_relevance": 3.6,
-        "total_citations": 3.8
+        "total_citations": 3.75
       }
     },
     "enhanced": {
       "CEE": {
-        "citation_precision": 0.9583333333333334,
-        "groundedness_score": 3.5,
-        "answer_relevance": 3.5,
-        "total_citations": 3.6666666666666665
+        "citation_precision": 0.8791666666666668,
+        "groundedness_score": 3.3333333333333335,
+        "answer_relevance": 3.3333333333333335,
+        "total_citations": 3.5833333333333335
       },
       "CSS": {
         "citation_precision": 1.0,
-        "groundedness_score": 3.75,
+        "groundedness_score": 3.625,
         "answer_relevance": 4.0,
-        "total_citations": 6.0
+        "total_citations": 6.625
       },
       "general": {
-        "citation_precision": 0.605,
-        "groundedness_score": 3.6,
-        "answer_relevance": 3.8,
-        "total_citations": 3.0
+        "citation_precision": 0.6425,
+        "groundedness_score": 3.7,
+        "answer_relevance": 3.85,
+        "total_citations": 3.1
       }
     }
   },
   "enhanced_features": {
-    "citation_validation_passed": 14,
-    "total_queries": 20,
+    "citation_validation_passed": 29,
+    "total_queries": 40,
     "avg_unique_sources": 1.55,
-    "invalid_citations_count": 6
+    "invalid_citations_count": 11
   },
   "representative_failure_cases": [
     {
       "type": "Low Citation Precision",
       "query_id": "direct_006_cee",
       "category": "direct",
+      "phase1_task": "CEE",
       "query": "Identify specific findings with quantitative evidence about how sleep duration affects physical health markers like inflammation, including citations",
       "issue": "Citation precision: 0.75 - (dowd2011sleep, dowd2011sleep_chunk_004)",
       "metrics": {
@@ -129,16 +130,76 @@
         "total_citations": 4,
         "valid_citations": 3
       },
-      "answer": "The provided evidence indicates several specific findings regarding how sleep duration affects physical health markers related to inflammation:\n\n1. **Long Sleep Duration and Inflammation**: The study found that longer sleep duration (defined as more than 8 hours) was associated with higher levels of",
+      "answer": "The provided evidence indicates several specific findings regarding how sleep duration affects physical health markers related to inflammation:\n\n1. **Long Sleep Duration and Inflammation**: The study found that longer sleep duration (defined as more than 8 hours) was associated with higher levels of inflammation markers such as IL-6 and e-selectin. This association remained significant even after adjusting for various health factors, including waist circumference and self-reported health decline (dowd2011sleep, dowd2011sleep_chunk_001).\n\n2. **Risk of Long Sleep Duration**: Increases in inflammation between 2000 and 2006 were linked to a higher risk of long sleep duration in 2006. Specifically, higher baseline levels of IL-6 and e-selectin predicted long sleep duration six years later, suggesting a potential long-term physiological process rather than just acute illness (dowd2011sleep, dowd2011sleep_chunk_011).\n\n3. **No Association with Short Sleep Duration**: The evidence indicates that there was little to no association between short sleep duration and inflammation markers. Increases in inflammation were specifically associated with long sleep duration, not short sleep duration (dowd2011sleep, dowd2011sleep_chunk_011).\n\n4. **Sample Characteristics**: The study analyzed data from 1,020 respondents aged 53 and over, indicating a focus on older populations. The average reported sleep duration in the sample was 6.4 hours (dowd2011sleep, dowd2011sleep_chunk_004).\n\n5. **Inflammatory Markers Examined**: The study measured several inflammatory markers, including C-Reactive Protein (CRP), IL-6, white blood cell count (WBC), fibrinogen, albumin, e-selectin, and sICAM-1, to assess their relationship with sleep duration (dowd2011sleep, dowd2011sleep_chunk_006).\n\nOverall, the findings suggest that long sleep duration may serve as a marker for underlying inflammatory processes, particularly in older adults, while short sleep duration does not appear to have the same association with inflammation. The evidence does not provide specific statistics on the levels of inflammation associated with long sleep duration beyond the qualitative findings. Further studies would be needed to quantify these relationships more precisely.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "dowd2011sleep_chunk_011",
+          "source_id": "dowd2011sleep",
+          "text": "-ICAM-1 and decreases (worsening) in albumin between 2000 and 2006 were associated with a higher risk of long but not short sleep duration in 2006 (Table 4). Higher baseline levels of IL-6 and e- selectin also predicted long sleep duration six years later independent of the change in levels, while higher baseline levels of sICAM-1 predicted short sleep duration. Given the six-year period between measurement of inflammation and sleep duration, these results suggest that the contemporaneous inflammation-long sleep duration association may not be driven solely by acute illness but likely reflects longer-term physiological processes. Discussion From our cross-sectional data, we found virtually no relationship between biomarkers of inflammation and the overall sleep quality index or its subcomponents. In contrast, we found a strong relationship between long sleep duration and most markers of inflammation, with little evidence of associations between short sleep duration and inflammation. Increases in inflammation between 2000 and 2006, determined from longitudinal data, were associated with an increased relative risk of long sleep duration in 2006, with no association found for Dowd et al. Page 5 Ann Epidemiol. Author manuscript; available in PMC 2012 November 1. NIH-PA Author Manuscript NIH-PA Author Manuscript NIH-PA Author Manuscript short sleep duration. This result may support the hypothesis that high inflammation is related to long sleep duration via the worsening of co-morbidities associated with inflammation. This work is consistent with some, but not all, previous research on inflammation and sleep. For example, Okun et al. (2009) found that poor sleep quality as measured by the PSQI was associated with higher CRP but not with IL-6 or tumor necrosis factor-alpha (TNF-) in a sample of 43 young U.S. women, with no associations between inflammatory markers and sleep duration as measured continuously, consistent with our primarily negative findings for sleep quality and continuous sleep duration(5). Friedman et al. (2005) identified relationships between IL-6 and the PSQI global score at the bivariate level but not after adjustment for sociodemographic factors in a sample of 74 U.S. women aged 61-90 (7). Better sleep efficiency, as measured by the in-home NightCap monitoring system, was related to significantly lower levels of IL-6 in this sample. McDade et al. (2006) found higher CRP in those reporting taking longer than 30 minutes to fall asleep,",
+          "token_count": 512,
+          "start_char": 17749,
+          "end_char": 20241,
+          "similarity_score": 0.8262923955917358
+        },
+        {
+          "chunk_id": "dowd2011sleep_chunk_014",
+          "source_id": "dowd2011sleep",
+          "text": " not mediated by measures of chronic conditions in our sample, it is possible that unmeasured disease processes with an inflammatory component are a source of both inflammation and long sleep duration. This explanation would be consistent with our findings that increases in inflammation between waves predicted long sleep duration in the second wave, and broader findings in the literature of an association between long sleep and mortality. An additional limitation is that self-reported sleep quality and duration are likely measured with error, which could contribute to our null findings for the PSQI sleep components and inflammation. Objective monitoring methods such as wrist- watch actigraphy have recently beenemployed in population surveys to measure more precisely various aspects of sleep quality and sleep duration (48). Our study contributes to the sparse literature on long sleep duration and inflammation, which may be particularly salient for older populations. The current study's strengths include a large sample size compared with previous studies, an extensive array of inflammatory markersincluding measures of change for most markers-- and one of the first investigations of these associations in a non-Western sample. Afternoon naps are customary among the elderly in Taiwan, with some evidence suggesting that nappers have better nocturnal sleep quality(49). Since the PSQI asks only about nighttime sleep duration, it is possible that total sleep duration is longer than reported, making short nighttime sleep duration less detrimental and longer nighttime sleep duration a stronger indicator of poor health. Future work on sleep duration and inflammation should move beyond an exclusive focus on short sleep and examine the potential importance of long sleep as a marker of underlying inflammatory illness. Prospective studies of sleep and inflammatory markers can help shed light on whether these relationships are causal or are driven by other factors. Such studies could also help elucidate the role of inflammation in the observed association between long sleep and mortality, contributing to our understanding of sleep as both a cause and consequence of ill health. Acknowledgments This work was supported by the National Institutes of Health grants R01AG016790 and R01AG16661(from the National Institute on Aging) and R24HD047879 (from The Eunice Kennedy Shriver National Institute of Child Health and Human Development). References 1. Hu F, Stampfer M, Speizer F, et al. A prospective study of sleep duration and mortality risk in women. Sleep. 2004; 27(3):4404. [PubMed: 15164896] 2. Patel SR, Malhotra A, White DP, Gottlieb DJ, Hu FB. Association between Reduced Sleep and Weight Gain in Women",
+          "token_count": 512,
+          "start_char": 23486,
+          "end_char": 26216,
+          "similarity_score": 0.7977840900421143
+        },
+        {
+          "chunk_id": "dowd2011sleep_chunk_001",
+          "source_id": "dowd2011sleep",
+          "text": "Sleep duration, sleep quality, and biomarkers of inflammation in a Taiwanese population Jennifer Beam Dowd, Ph.D.1,2,*, Noreen Goldman, D.Sc.3, and Maxine Weinstein, Ph.D.4 1Epidemiology and Biostatistics, Hunter College, School of Public Health, City University of New York (CUNY) 2CUNY Institute for Demographic Research (CIDR) 3Office of Population Research, Princeton University 4Center for Population and Health, Georgetown University Abstract PurposeShort and long sleep duration and sleep quality are associated with health including all-cause mortality, cardiovascular disease, diabetes, and obesity. Inflammation may play a role in mediating these associations. MethodsWe examined associations between inflammation and self-reported sleep characteristics in 1020 respondents of the 2000 and 2006 Social Environment and Biomarkers of Aging Study (SEBAS), a nationally representative survey of Taiwanese adults ages 53 and over. Regression models were used to estimate cross-sectional relationships between inflammation (IL-6, CRP, fibrinogen, e-selectin, sICAM-1, albumin, and WBC) and a modified Pittsburgh Sleep Quality Index (PSQI), index subcomponents, and self-reported sleep duration. Change in inflammatory markers between 2000 and 2006 was also used to predict long or short sleep duration in 2006. ResultsInflammation was not related to the overall index of sleep quality. However, longer sleep (> 8 hours) was associated with higher levels of inflammation. These associations remained after adjustment for waist circumference, self-reported health decline, diabetes, arthritis/ rheumatism, heart disease, and depressive symptoms. Increases in inflammation between 2000 and 2006 were associated with long but not short sleep duration in 2006 for several markers. ConclusionsLong sleep duration may be a marker of underlying inflammatory illness in older populations. Future studies should explore whether inflammation explains observed relationships between long sleep and mortality. Keywords sleep; inflammation; aging; Taiwan; CRP; IL-6  2011 Elsevier Inc. All rights reserved. *Corresponding Author: Jennifer Beam Dowd, Epidemiology and Biostatistics, Hunter College, City University of New York (CUNY), CUNY School of Public Health, CUNY Institute for Demographic Research, 425 E. 25th St., Box 926, New York, NY 10010, jdowd",
+          "token_count": 512,
+          "start_char": 0,
+          "end_char": 2346,
+          "similarity_score": 0.7949512600898743
+        },
+        {
+          "chunk_id": "dowd2011sleep_chunk_009",
+          "source_id": "dowd2011sleep",
+          "text": " in Western as well as Chinese populations (40, 41), and this subset has been found to predict mortality in the broader TLSA (42). Statistical Analysis First, we estimated linear regression models with each inflammatory marker as an outcome to examine cross-sectional associations between individual markers and the overall modified PSQI as well as the five PSQI sleep components, adjusted for age and sex. PSQI subcomponents were entered linearly (0-3); results were similar when scores were used as indicator variables. Linear probability regression models were run for the dichotomous CRP variables, the overall inflammation index, and the dichotomous indicator of high overall inflammation (results using logit models for binary outcomes were very similar). Next, we ran analogous models for each inflammatory marker using a categorical measure of sleep duration (<6 hours, 6-8 hours, >8 hours) as the predictor, with and without adjustment for potential health mediators. Finally, because of the possibility that inflammation can promote sleep (18), we tested whether increases in inflammation between Dowd et al. Page 4 Ann Epidemiol. Author manuscript; available in PMC 2012 November 1. NIH-PA Author Manuscript NIH-PA Author Manuscript NIH-PA Author Manuscript 2000 and 2006 predicted sleep duration in 2006. This analysis included all markers except fibrinogen (which was collected only in 2006), and was based on respondents who participated in both waves (n=639). For each biomarker, we used a multinomial logit model with sleep duration coded categorically as the dependent variable, adjusted for age, sex and baseline inflammation levels. Because some studies have found sex differences in relationships between inflammation and sleep (13, 43), we also tested for interactions by sex; these interactions were not statistically significant and thus were not included in our final models. Results The average age of the sample was 66 years, with 6.4 average hours of reported sleep (Table 1). Overall, there were few associations between the inflammatory markers and the PSQI subcomponents or the overall PSQI (Table 2). There were no significant associations for CRP, IL-6, fibrinogen, WBC, or albumin. sICAM-1 showed marginally significant positive associations with the overall index (p0.057), sleep efficiency (p0.092), and a significant association with the index measure of short sleep duration (p.012). Self-reported sleep quality",
+          "token_count": 512,
+          "start_char": 14038,
+          "end_char": 16486,
+          "similarity_score": 0.7781267166137695
+        },
+        {
+          "chunk_id": "dowd2011sleep_chunk_006",
+          "source_id": "dowd2011sleep",
+          "text": " the night), sleep efficiency (hrs asleep/hrs in bed), and sleep dysfunction (daytime sleepiness).1 As with the full-length PSQI, each dimension was scored on a 0-3 scale, with higher numbers reflecting worse sleep quality. The overall (shortened) PSQI was a sum of the five subcomponents, with a range of (0-15). In accordance with the traditional PSQI scale, sleep duration was coded categorically (0=7 hours, 1=6 to <7 hours, 2=5 to <6 hours, and 3=<5 hours). Because of potential associations between both long and short sleep duration and health outcomes, we also categorized sleep duration as <6 hours, 6-8 hours, and >8 hours for separate non-linear analyses. Inflammatory markers Inflammatory markers were assayed from overnight fasting serum samples. We examined all inflammation-related markers measured in SEBAS I and II: C-Reactive protein (CRP), interleukin-6 (IL-6), white blood cell count (WBC), fibrinogen (SEBAS II only), albumin, e- selectin, and sICAM-1; measures of IL-6, e-selectin, sICAM-1, and CRP for SEBAS I were derived from frozen specimens collected in 2000 and assayed between 2007 and 2009. CRP, an acute phase protein, is an important component of the non-specific innate immune system response to infection and injury and is often used as a general marker of systemic inflammation (32, 33). IL-6 is the primary inflammatory cytokine responsible for upregulation of CRP (34). Fibrinogen is an acute phase protein that plays an important role 1The original PSQI contains two additional subcomponents: sleep disturbances and use of sleep medication (30). Subsequent research has shown that the sleep medication component is not significantly associated with the global PSQI score, and sleep disturbances had a low correlation with the global score (31). Dowd et al. Page 3 Ann Epidemiol. Author manuscript; available in PMC 2012 November 1. NIH-PA Author Manuscript NIH-PA Author Manuscript NIH-PA Author Manuscript in blood clotting (34). Albumin is involved in the transport of small molecules in the blood and in the maintenance of osmotic pressure, with low levels associated with inflammation (35). E-select",
+          "token_count": 512,
+          "start_char": 9204,
+          "end_char": 11345,
+          "similarity_score": 0.7752155065536499
+        }
+      ],
       "invalid_citations": [
         "(dowd2011sleep, dowd2011sleep_chunk_004)"
       ],
+      "reference_list": "dowd2011sleep: Jennifer B. Dowd, Noreen Goldman, Maxine Weinstein (2011). Sleep duration, sleep quality, and biomarkers of inflammation in a Taiwanese population. Various. https://pmc.ncbi.nlm.nih.gov/articles/PMC3204862/",
+      "citation_validation_passed": false,
+      "num_unique_sources": 1,
+      "model": "gpt-4o-mini",
+      "prompt_version": "v1.0_baseline",
+      "metadata": {
+        "num_chunks_retrieved": 5,
+        "retrieval_method": "dense",
+        "prompt_tokens": 3024,
+        "completion_tokens": 462,
+        "total_tokens": 3486
+      },
       "root_cause": "Citations in answer do not match retrieved chunks"
     },
     {
       "type": "Missing Citations",
       "query_id": "edge_004",
       "category": "edge_case",
+      "phase1_task": "general",
       "query": "What is the effect of caffeine consumption timing on sleep quality?",
       "issue": "No citations in answer despite 5 retrieved chunks",
       "metrics": {
@@ -147,27 +208,142 @@
         "groundedness_score": 4,
         "answer_relevance": 4
       },
-      "answer": "The provided evidence does not contain information about the effect of caffeine consumption timing on sleep quality. To answer this question, additional sources covering the relationship between caffeine timing and sleep quality would be needed.",
+      "answer": "The provided evidence does not contain information about the effect of caffeine consumption timing on sleep quality. To answer this question, additional sources covering the specific gap regarding caffeine consumption timing and its impact on sleep quality would be needed.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "kohyama2021which_chunk_023",
+          "source_id": "kohyama2021which",
+          "text": " associated with sleepiness [79], sleep-onset duration and sleep efciency during the rst two years of life [80], and metabolic dysfunction [81,82]. Timing of sleep and chronotype are also important issues to be investigated in terms of both private and public health. 12. Conclusions Both sleep quantity and sleep quality are fundamental components of sleep. Since there are marked inter-individual differences in the need for sleep, sleep quantity might be assessed not by actual duration but by a deviation from the individuals own optimal sleep quantity. For sleep quality, no standardized scale has been established, probably because sleep quality has many aspects. The variables for sleep quality can be selected depending on the purpose of the study. At present, many studies have decided that sleep quality, rather than sleep quantity, is favorable for reecting health or functioning issues. However, these studies used actual values for sleep quantity. Further studies using the deviation from an individuals own optimal sleep quantity may show us another aspect of the effects of sleep quantity on various life issues. Funding: This research received no external funding. Institutional Review Board Statement: Not applicable. Informed Consent Statement: Not applicable. Data Availability Statement: Not applicable. Conicts of Interest: The author declares no conict of interest. References 1. Irwin, M.R. Why sleep is important for health: A psychoneuroimmunology perspective. Annu. Rev. Psychol. 2015, 66, 143172. [CrossRef] 2. Rajaratnam, S.M.; Arendt, J. Health in a 24-h society. Lancet 2001, 358, 9991005. [CrossRef] 3. Kohyama, J. Sleep, serotonin, and suicide in Japan. J. Phsiol. Anthropol. 2011, 30, 18. [CrossRef] 4. Sekine, C.; Watanabe, Y.; Hayashida, M. No More Decline in Sleeping Time, More Time Now Spent on Necessary Activities. Public Opinion Research Division Broadcasting Culture Research Institute, Japan Broadcasting Corporation (NHK). 2016. Available online: https://www.nhk.or.jp/bunken/english/reports/pdf/report_16071301.pdf (accessed on 21 May 2021). 5. Ford, E.S.; Cunningham, T.; Croft, J.B. Trends in self-reported sleep duration among US adults from 1985 to 2012",
+          "token_count": 512,
+          "start_char": 40102,
+          "end_char": 42304,
+          "similarity_score": 0.6604366302490234
+        },
+        {
+          "chunk_id": "kohyama2021which_chunk_036",
+          "source_id": "kohyama2021which",
+          "text": "Ref] [PubMed] 72. Ricardo, A.C.; Knutson, K.; Chen, J.; Appel, L.J.; Bazzano, L.; Carmona-Powell, E.; Cohan, J.; Kurella Tamura, M.; Steigerwalt, S.; Thornton, J.D.; et al. The association of sleep duration and quality with CKD progression. J. Am. Soc. Nephrol. 2017, 28, 37083715. [CrossRef] [PubMed] 73. Phillips, S.R.; Johnson, A.H.; Shirey, M.R.; Rice, M. Sleep quality in school-aged children: A concept analysis. J. Pediatr. Nurs. 2020, 52, 5463. [CrossRef] 74. Blackwell, C.K.; Hartstein, L.E.; Elliott, A.J.; Forrest, C.B.; Ganiban, J.; Hunt, K.J.; Camargo, C.A.; LeBourgeois, M.K., Jr.; Program collaborators for Environmental inuences on Child Health Outcomes (ECHO). Better sleep, better life? How sleep quality inuences childrens life satisfaction. Qual. Life Res. 2020, 29, 24652474. [CrossRef] 75. Javaheri, S.; Storfer-Isser, A.; Rosen, C.L.; Redline, S. Sleep quality and elevated blood pressure in adolescents. Circulation 2008, 118, 10341040. [CrossRef] [PubMed] 76. Martikainen, S.; Pesonen, A.K.; Feldt, K.; Jones, A.; Lahti, J.; Pyhl, R.; Heinonen, K.; Kajantie, E.; Eriksson, J.; Rikknen, K. Poor sleep and cardiovascular function in children. Hypertension 2011, 58, 1621. [CrossRef] 77. Komada, Y.; Ishibashi, Y.; Hagiwara, S.; Kobori, M.; Shimura, A. A Longitudinal Study of Subjective Daytime Sleepiness Changes in Elementary School Children Following a Temporary School Closure Due to COVID-19. Children 2021, 8, 183. [CrossRef] 78. Duffy, J.F.; Abbott, S.M.; Burgess, H.J.; Crowley, S",
+          "token_count": 512,
+          "start_char": 56388,
+          "end_char": 57899,
+          "similarity_score": 0.6406059861183167
+        },
+        {
+          "chunk_id": "li2025regular_chunk_003",
+          "source_id": "li2025regular",
+          "text": "1; Sun et al., 2022). While numerous studies have focused on sleep duration, with both short and long sleep durations associated with adverse mental health outcomes (Chunnan, Shaomei, & Wannian, 2022), mounting evidence suggests that other dimensions of sleep may be equally important. Sleep regularity, the day-to-day consistency in sleepwake timing rather than the amount of sleep obtained, has emerged as a potentially critical component of healthy sleep (Windred et al., 2024). The sleep regularity index (SRI), developed by Phillips et al., quantifies the probability of an individual being in the same sleepwake state at any two time points 24 hours apart (Phillips et al., 2017), thus capturing the stability of circadian timing independent of total sleep duration. Psychological Medicine www.cambridge.org/psm Original Article Cite this article: Li, D.-R., Li, Z.-X., Li, M.-H., Liu, B.-Q., Fang, Q., Liu, J.-C., Zheng, W.-R., Gong, T.-T., Gao, S.-Y., & Wu, Q.-J. (2025). Regular sleep patterns, not just duration, critical for mental health: association of accelerometer-derived sleep regularity with incident depression and anxiety. Psychological Medicine, 55, e239, 110 https://doi.org/10.1017/S0033291725101281 Received: 06 May 2025 Revised: 18 June 2025 Accepted: 08 July 2025 Keywords: anxiety; depression; sleep duration; sleep regularity Corresponding authors: Ting-Ting Gong, Shan-Yan Gao and Qi-Jun Wu; Emails: gongtt@sj-hospital.org; gaosy@sj- hospital.org; wuqj@sj-hospital.org *These authors contributed equally to this work.  The Author(s), 2025. Published by Cambridge University Press. This is an Open Access article, distributed under the terms of the Creative Commons Attribution licence (http:// creativecommons.org/licenses/by/4.0), which permits unrestricted re-use, distribution and reproduction, provided the original article is properly cited. https://doi.org/10.1017/S0033291725101281 Published online by Cambridge University Press The biological underpinnings of sleep regularity are closely tied to the circadian system (Charrier, Bertrand, Pierre, & Sylvie, 2017).",
+          "token_count": 512,
+          "start_char": 3478,
+          "end_char": 5578,
+          "similarity_score": 0.6331626176834106
+        },
+        {
+          "chunk_id": "maki2025sleep_chunk_033",
+          "source_id": "maki2025sleep",
+          "text": " an overview. Internet J. Endocrinol. 2010. Sletten, T.L., Weaver, M.D., Foster, R.G., et al., 2023. The importance of sleep regularity: a consensus statement of the national sleep foundation sleep timing and variability panel. Sleep Health 9 (6), 801820. Swanson, L.M., Hood, M.M., Hall, M.H., et al., 2023. Sleep timing, sleep regularity, and psychological health in early late life women: findings from the study of Womens health across the nation (SWAN). Sleep Health 9 (2), 203210. Um, Y.J., Kim, Y., Chang, Y., et al., 2023. Association of changes in sleep duration and quality with incidence of depression: a cohort study. J. Affect. Disord. 328, 6471. Valles-Colomer, M., Falony, G., Darzi, Y., et al., 2019. The neuroactive potential of the human gut microbiota in quality of life and depression. Nat. Microbiol. 4 (4), 623632. Van Dongen, H.P., Maislin, G., Mullington, J.M., Dinges, D.F., 2003. The cumulative cost of additional wakefulness: dose-response effects on neurobehavioral functions and sleep physiology from chronic sleep restriction and total sleep deprivation. Sleep 26 (2), 117126. Wu, Z., Yue, Q., Zhao, Z., et al., 2023. A cross-sectional study of smoking and depression among US adults: NHANES (2005-2018). Front. Public Health 11, 1081706. Yang, L., Wallen, G., Barb, J., Maki, K., Farmer, N., 2024. 0863 sleep regularity and cardiovascular health among U.S. adults. Sleep 47 (Suppl. ment_1), A370A371. Zee, P.C., Vitiello, M.V., 2009. Circadian rhythm sleep disorder: irregular sleep wake rhythm type. Sleep Med Clin 4 (2), 213218. Zhang, J., He, M., Wang, X., Jiang, H., Huang, J., Liang, S., 2024. Association of sleep duration and risk of mental disorder: a systematic review and meta-analysis. Sleep Breath. 28 (1",
+          "token_count": 512,
+          "start_char": 54132,
+          "end_char": 55879,
+          "similarity_score": 0.6313439607620239
+        },
+        {
+          "chunk_id": "fasokun2026associations_chunk_041",
+          "source_id": "fasokun2026associations",
+          "text": "doi.org/10.1038/s42003-021-02825-4 PMID: 34795404 25. Blackwelder AMH, Huber L. Effect of inadequate sleep on frequent mental distress. Preventing Chronic Diseases. 2021. 26. St-Onge M-P, Grandner MA, Brown D, Conroy MB, Jean-Louis G, Coons M, et al. Sleep Duration and Quality: Impact on Lifestyle Behaviors and Cardiometabolic Health: A Scientific Statement From the American Heart Association. Circulation. 2016;134(18):e36786. https://doi.org/10.1161/ CIR.0000000000000444 PMID: 27647451 27. Yin J, Jin X, Shan Z, Li S, Huang H, Li P, et al. Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A System atic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies. J Am Heart Assoc. 2017;6(9):e005947. https://doi.org/10.1161/ JAHA.117.005947 PMID: 28889101 28. Wang Y-H, Wang J, Chen S-H, Li J-Q, Lu Q-D, Vitiello MV, et al. Association of Longitudinal Patterns of Habitual Sleep Duration With Risk of Cardiovascular Events and All-Cause Mortality. JAMA Netw Open. 2020;3(5):e205246. https://doi.org/10.1001/jamanetworkopen.2020.5246 PMID: 32442289 29. Shankar A, Charumathi S, Kalidindi S. Sleep duration and self-rated health: the national health interview survey 2008. Sleep. 2011;34(9):11737. https://doi.org/10.5665/SLEEP.1232 PMID: 21886354 30. tefan L, Juranko D, Prosoli R, Bari R, Spori G. Self-Reported Sleep Duration and Self-Rated Health in Young Adults. J Clin Sleep Med. 2017;13(7):899904. https://doi.org/10.5664/jcsm.6662 PMID: 28502281 31. Li X-L, Wei J, Zhang X, Meng Z, Zhu W. Relationship between night",
+          "token_count": 512,
+          "start_char": 60856,
+          "end_char": 62427,
+          "similarity_score": 0.6239171028137207
+        }
+      ],
+      "reference_list": "",
+      "citation_validation_passed": true,
+      "num_unique_sources": 0,
+      "model": "gpt-4o-mini",
+      "prompt_version": "v1.0_baseline",
+      "metadata": {
+        "num_chunks_retrieved": 5,
+        "retrieval_method": "dense",
+        "prompt_tokens": 3019,
+        "completion_tokens": 43,
+        "total_tokens": 3062
+      },
       "root_cause": "Answer generated without citations despite having retrieved chunks"
     },
     {
-      "type": "Invalid Citations",
-      "query_id": "direct_010",
-      "category": "direct",
-      "query": "How effective is cognitive behavioral therapy for insomnia in patients with depression?",
-      "issue": "Citation validation failed: 1 invalid citations",
+      "type": "Missing Citations",
+      "query_id": "edge_005",
+      "category": "edge_case",
+      "phase1_task": "general",
+      "query": "How does sleep affect athletic performance in professional athletes?",
+      "issue": "No citations in answer despite 5 retrieved chunks",
       "metrics": {
-        "citation_precision": 0.8,
-        "total_citations": 5,
-        "invalid_citations": [
-          "(carney2017cognitive, carney2017cognitive_chunk_005)"
-        ]
+        "citation_precision": 0.0,
+        "total_citations": 0,
+        "groundedness_score": 4,
+        "answer_relevance": 4
       },
-      "answer": "Cognitive Behavioral Therapy for Insomnia (CBT-I) has shown effectiveness in improving sleep in patients with comorbid major depressive disorder (MDD) and insomnia. A randomized controlled trial involving 107 participants with MDD and insomnia found that both CBT-I groups (CBT-I + antidepressant and",
-      "invalid_citations": [
-        "(carney2017cognitive, carney2017cognitive_chunk_005)"
+      "answer": "The provided evidence does not contain information about how sleep affects athletic performance in professional athletes. To answer this question, additional sources covering the specific relationship between sleep and athletic performance would be needed.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sochal2024effect_chunk_003",
+          "source_id": "sochal2024effect",
+          "text": " seems that the reduced inflammatory response during intense exercise can protect against low-grade chronic inflammation8. However, the effect of physical activity during DS on inflammatory parameters was not investigated. Therefore, the aim of the study was to estimate the effect of sleep duration, quality as well as both acute and chronic sleep deprivation on selected inflammatory factors, while taking into account actigraphic data obtained during DS. OPEN Department of Sleep Medicine and Metabolic Disorders, Medical University of Lodz, ul. Mazowiecka 6/8, 92215 Lodz, Poland. *email: sochalmar@gmail.com 2 Vol:.(1234567890) Scientific Reports | (2024) 14:17379 | https://doi.org/10.1038/s41598-024-68498-1 www.nature.com/scientificreports/ Results For the study, 113 participants were recruited, and 36 of them were excluded from further analysis (31 partici- pants did not complete the entire study protocol, 5 participants had a sleep time of less than 5 h). In total, the results of 77 participants were analyzed. The participant characteristics are presented in Table 1. Average sleep efficiency based on sleep diaries was negatively correlated with morning WBC and lymphocytes (LYM) values, but not with granulocytes (GRA), monocytes (MON) values, or CRP concentration (Table 2). Additionally, sleep time and sleep latency did not correlate with any of the inflammatory parameters (P > 0.05, Table 2). After a night of sleep (PSG examination), morning WBC values negatively correlated with total sleep time (TST), sleep efficiency, REM duration, but not with NREM duration. LYM and MON values did not correlate with PSG parameters (P > 0.05, Table 2). GRA positively correlated with REM latency, negatively with sleep efficiency and REM duration. CRP concentrations negatively correlated only with sleep latency, but not with other PSG parameters (Table 2). Regression analysis showed that WBC values were affected by sleep efficiency calculated on the basis of sleep diaries (B =  0.04, t =  2.92, P = 0.005), but not by PSG parameters (REM durations, number of REM events, sleep efficiency; R2 = 0.10, F = 8.55, P = 0.005). Following DS, the GRA value increased compared to the value observed after a night",
+          "token_count": 512,
+          "start_char": 3585,
+          "end_char": 5807,
+          "similarity_score": 0.6309604644775391
+        },
+        {
+          "chunk_id": "sochal2024effect_chunk_022",
+          "source_id": "sochal2024effect",
+          "text": " 22. Kapur, V. K. et al. Clinical practice guideline for diagnostic testing for adult obstructive sleep apnea: An American academy of sleep medicine clinical practice guideline. J. Clin. Sleep Med. 13, 479504 (2017). 23. Smith, M. T. et al. Use of actigraphy for the evaluation of sleep disorders and circadian rhythm sleep-wake disorders: An American academy of sleep medicine systematic review, meta-analysis, and GRADE assessment. J. Clin. Sleep Med. 14, 12091230 (2018). 24. Siddall, A. G. et al. Validity of energy expenditure estimation methods during 10 days of military training. Scand. J. Med. Sci. Sport. 29, 13131321 (2019). Acknowledgements We would like to sincerely thank all the participants of the study for their cooperation and suport. Author contributions Conceptualization, M.S; Methodology, M.S., and A.G.; Formal analysis, M.S.; Investigation, M.S., A.G., M.D., S.T., FF.K, P.B.; Writingoriginal draft, M.S.; Writingreview & editing, A.G., P.B. All authors have read and agreed to the published version of the manuscript. Competing interests The authors declare no competing interests. Additional information Correspondence and requests for materials should be addressed to M.S. Reprints and permissions information is available at www.nature.com/reprints. Publishers note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations. 7 Vol.:(0123456789) Scientific Reports | (2024) 14:17379 | https://doi.org/10.1038/s41598-024-68498-1 www.nature.com/scientificreports/ Open Access This article is licensed under a Creative Commons Attribution-NonCommercial- NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the articles Creative Commons licence, unless indicated otherwise in a credit line to the material. If material",
+          "token_count": 512,
+          "start_char": 28629,
+          "end_char": 30890,
+          "similarity_score": 0.6167066693305969
+        },
+        {
+          "chunk_id": "kohyama2021which_chunk_001",
+          "source_id": "kohyama2021which",
+          "text": "children Review Which Is More Important for Health: Sleep Quantity or Sleep Quality? Jun Kohyama \u0001\u0002\u0003\u0001\u0004\u0005\u0006\u0007\b \u0001\u0002\u0003\u0004\u0005\u0006\u0007 Citation: Kohyama, J. Which Is More Important for Health: Sleep Quantity or Sleep Quality?. Children 2021, 8, 542. https://doi.org/10.3390/ children8070542 Academic Editor: Stijn Verhulst Received: 4 June 2021 Accepted: 22 June 2021 Published: 24 June 2021 Publishers Note: MDPI stays neutral with regard to jurisdictional claims in published maps and institutional afl- iations. Copyright:  2021 by the author. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/). Tokyo Bay Urayasu Ichikawa Medical Center, Urayasu 279-0001, Japan; j-kohyama@jadecom.or.jp; Tel.: +81-47-351-3101 Abstract: Sleep is one of the basic physiological processes for human survival. Both sleep quantity and sleep quality are fundamental components of sleep. This review looks at both sleep quantity and sleep quality, considering how to manage the complex but probably unavoidable physiological phenomenon of sleep. The need for sleep has marked variations between individuals, in addition to the effects of variable conditions. Studies on sleep quality started later than those on sleep quantity, beginning in 1989 when Ford and Kamerow revealed that insomnia increases the risk of psychiatric disorders. According to the nationwide research team on the quality of sleep (19FA0901), sleep quality is superior to sleep quantity as an index for assessing sleep, and that restfulness obtained through sleep is a useful index for assessing sleep quality. We should pay more attention to obtaining sleep of good quality (restfulness, no sleepiness, no need for more sleep, sufcient objective sleep depth, etc.), although there have not been enough studies on the associations between sleep quality and health or disorders in children and adolescents. Further studies using the deviation from an individuals optimal sleep quantity may show us another aspect of the effects of sleep quantity on various life issues. Keywords: restfulness; sleepiness; sleep duration; insufcient sleep syndrome; Pittsburgh Sleep Quality Index (PAQI); Epworth Sleepiness Scale (ESS) 1. Introduction There",
+          "token_count": 512,
+          "start_char": 0,
+          "end_char": 2337,
+          "similarity_score": 0.5989299416542053
+        },
+        {
+          "chunk_id": "sochal2024effect_chunk_001",
+          "source_id": "sochal2024effect",
+          "text": "1 Vol.:(0123456789) Scientific Reports | (2024) 14:17379 | https://doi.org/10.1038/s41598-024-68498-1 www.nature.com/scientificreports The effect of sleep and its restriction on selected inflammatory parameters Marcin Sochal *, Marta Ditmer , Szymon Turkiewicz , Filip Franciszek Karuga , Piotr Biaasiewicz & Agata Gabryelska Insufficient sleep duration may lead to a series of immune dysfunctions. One of the factors influencing this effect could be physical activity (PA). The study aimed to assess the impact of deprivation of sleep (DS) on selected inflammatory parameters. Seventy-seven participants completed the protocol consisting of polysomnography (PSG) conducted in a sleep laboratory and DS, monitored with an actigraph. PA was assessed with actigraphy, which categorized participants as active or inactive. White blood cells (WBC) values negatively correlated with sleep efficiency based on sleep diaries and PSG parameters (total sleep time, sleep efficiency, and REM duration), but regression analysis showed that WBC depends only on the sleep diary parameter. Granulocytes (GRA) positively correlated with REM latency, and negatively with sleep efficiency. After DS, all participants exhibited an elevated GRA count. The number of WBC and GRA increased also in the active group; inactive participants showed no changes in inflammatory parameters. The overall number of WBC depends primarily on the quality of sleep over a period of several days. Under the influence of sleep deprivation, the number of GRA increases, but the number of leukocytes depends on the level of physical activity during DS. Keywords Sleep deprivation, Inflammation, C-reactive protein Sleep disorders are a common problem in the general population. It is estimated they affect about 30% of the population1. Deprivation of sleep (DS) is defined as a forced lack of sleep, which might stem from a number of causes, including work, leisure or pain2. Insufficient sleep duration can lead to several systemic complications, including impairment of immunity. In a murine DS model, elevated levels of autoantibodies were observed, which are characteristic of many autoim- mune diseases, such as systemic lupus erythematosus3. Hsiao et al. in their study showed that individuals with sleep disorders have a higher risk of developing the following immune-mediated diseases: systemic lupus ery- thematosus, rheumatoid arthritis, ankylosing spond",
+          "token_count": 512,
+          "start_char": 0,
+          "end_char": 2426,
+          "similarity_score": 0.5739143490791321
+        },
+        {
+          "chunk_id": "fasokun2026associations_chunk_047",
+          "source_id": "fasokun2026associations",
+          "text": ". 2015;18(10):106877. https:// doi.org/10.1111/ele.12489 PMID: 26248954 55. Patel SR, Malhotra A, Gottlieb DJ, White DP, Hu FB. Correlates of long sleep duration. Sleep. 2006;29(7):8819. https://doi.org/10.1093/ sleep/29.7.881 PMID: 16895254 56. Papadopoulos D, Etindele Sosso FA. Socioeconomic status and sleep health: a narrative synthesis of 3 decades of empirical research. J Clin Sleep Med. 2023;19(3):60520. https://doi.org/10.5664/jcsm.10336 PMID: 36239056 57. Jike M, Itani O, Watanabe N, Buysse DJ, Kaneita Y. Long sleep duration and health outcomes: A systematic review, meta-analysis and meta- regression. Sleep Med Rev. 2018;39:2536. https://doi.org/10.1016/j.smrv.2017.06.011 PMID: 28890167 58. Brody DJ. Depression Prevalence in Adolescents and Adults: United States, August 2021August 2023. 2025. https://www.cdc.gov/nchs/products/ databriefs/db527.htm 59. Udupa NS, Twenge JM, McAllister C, Joiner TE. Increases in poor mental health, mental distress, and depression symptoms among U.S. adults, 1993-2020. J Mood Anxiety Disord. 2023;2:100013. 60. Blackwelder A, Hoskins M, Huber L. Effect of Inadequate Sleep on Frequent Mental Distress. Prev Chronic Dis. 2021;18:E61. https://doi. org/10.5888/pcd18.200573 PMID: 34138697 61. Kim J-H, Kim KR, Cho KH, Yoo K-B, Kwon JA, Park E-C. The association between sleep duration and self-rated health in the Korean general pop ulation. J Clin Sleep Med. 2013;9(10):105764. https://doi.org/10.5664/jcsm.3082 PMID: 24127150 62. Su P, He",
+          "token_count": 512,
+          "start_char": 68115,
+          "end_char": 69605,
+          "similarity_score": 0.5715144872665405
+        }
       ],
-      "root_cause": "Citations reference chunks not in retrieved set"
+      "reference_list": "",
+      "citation_validation_passed": true,
+      "num_unique_sources": 0,
+      "model": "gpt-4o-mini",
+      "prompt_version": "v1.0_baseline",
+      "metadata": {
+        "num_chunks_retrieved": 5,
+        "retrieval_method": "dense",
+        "prompt_tokens": 3025,
+        "completion_tokens": 37,
+        "total_tokens": 3062
+      },
+      "root_cause": "Answer generated without citations despite having retrieved chunks"
     }
   ]
 }

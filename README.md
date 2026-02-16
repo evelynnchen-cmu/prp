@@ -210,6 +210,8 @@ python -m src.eval.compare_baseline_enhanced
 - `eval_report_data.json` - Summary metrics for writing reports
 - `representative_failure_cases.json` - 3 detailed failure cases for analysis
 
+**Logging:** Running the evaluation scripts will also log all queries to `logs/query_logs.jsonl` with full chunk text, queries, answers, prompt/version IDs, and metadata. This provides machine-readable logs of all evaluation runs (20 baseline + 20 enhanced = 40+ log entries).
+
 **Note:** `run_query.sh` is for **single queries** (testing/exploration). The evaluation scripts in `src/eval/` are for **systematic evaluation** across all test queries.
 
 ### Query Set
