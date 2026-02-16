@@ -1,0 +1,146 @@
+[
+    {
+      "id": "wang2025association",
+      "title": "Association Between Sleep Duration and Anxiety in US Adults: A Nationally Representative Cross-Sectional Study",
+      "authors": "Xing Wang, Yunhui Zhong, Rui Wang, Dongdong Zhang, Yihan Li, Yi Pan, Yibo Li",
+      "year": 2025,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12103868/",
+      "relevance_note": "Quantifies the relationship between sleep duration and anxiety using a large, representative US adult sample and provides quantitative reports."
+    },
+    {
+      "id": "aschbrenner2022sleep",
+      "title": "Sleep Quality and its Relationship to Mental Health, Physical Health, and Health Behaviors Among Young Adults with Serious Mental Illness Enrolled in a Lifestyle Intervention Trial",
+      "authors": "Kelly A. Aschbrenner, John A. Naslund, Jessica K. Salwen-Deremer, Julia Browne, Stephen J. Bartels, Rosemarie S. Wolfe, Haiyi Xie, Kim T. Mueser",
+      "year": 2022,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10047807/",
+      "relevance_note": "Uses the PSQI to examine sleep quality in young adults with serious mental illness; finds significant association between poor sleep quality and depressive symptoms (β = .438, p < .001) but not with physical health or health behaviors."
+    },
+    {
+      "id": "kohyama2021which",
+      "title": "Which Is More Important for Health: Sleep Quantity or Sleep Quality?",
+      "authors": "Jun Kohyama",
+      "year": 2021,
+      "source_type": "review article",
+      "link_or_DOI": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8304732/",
+      "relevance_note": "Review article examining whether sleep quantity or quality is more important for health; concludes that sleep quality is superior to sleep quantity as an index for assessing sleep and health outcomes."
+    },
+    {
+      "id": "wild2018dissociable",
+      "title": "Dissociable effects of self-reported daily sleep duration on high-level cognitive abilities",
+      "authors": "Conor J. Wild, Emily S. Nichols, Michael E. Battista, Bobby Stojanoski, Adrian M. Owen",
+      "year": 2018,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.1093/sleep/zsy182",
+      "relevance_note": "Large-scale study showing that sleep duration has a U-shaped relationship with cognitive performance, with optimal performance at 7-8 hours; too much or too little sleep both impair reasoning and verbal abilities."
+    },
+    {
+      "id": "li2023relationship",
+      "title": "Relationship between night-sleep duration and risk for depression in middle-aged and older adults",
+      "authors": "Xin-lin Li, Jiayin Wei, Xinying Zhang, Zhuo Meng, Wentao Zhu",
+      "year": 2023,
+      "source_type": "systematic review and meta-analysis",
+      "link_or_DOI": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10017495/",
+      "relevance_note": "Dose-response meta-analysis showing a U-shaped association between night-sleep duration and depression risk in middle-aged and older adults, with 7 hours being optimal."
+    },
+    {
+      "id": "fasokun2026associations",
+      "title": "Associations between sleep duration and depression, mental health, physical health, and general health in U.S. adults: A population-based study",
+      "authors": "Mojisola Fasokun, Oluwasegun Akinyemi, Fadeke Ogunyankin, Phiwinhlanhla Ndebele-Ngwenya, Kaelyn Gordon, Seun Ikugbayigbe, Uzoamaka Nwosu, Mariam Michael, Kakra Hughes, Temitope Ogundare",
+      "year": 2026,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.1371/journal.pone.0321347",
+      "relevance_note": "Large US population-based study demonstrating higher depression incidence and worse health outcomes for both short and long sleepers versus 6-8 hours of sleep."
+    },
+    {
+      "id": "dowd2011sleep",
+      "title": "Sleep duration, sleep quality, and biomarkers of inflammation in a Taiwanese population",
+      "authors": "Jennifer B. Dowd, Noreen Goldman, Maxine Weinstein",
+      "year": 2011,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3204862/",
+      "relevance_note": "Links objectively measured sleep duration/quality with inflammatory biomarkers such as CRP and IL-6 in adults."
+    },
+    {
+      "id": "sochal2024effect",
+      "title": "The effect of sleep and its restriction on selected inflammatory parameters",
+      "authors": "Marcin Sochal, Marta Ditmer, Szymon Turkiewicz, Filip Karuga, Piotr Białasiewicz, Agata Gabryelska",
+      "year": 2024,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.1038/s41598-024-68498-1",
+      "relevance_note": "Experimental sleep restriction study relating polysomnographic sleep continuity measures to immune and inflammatory indices."
+    },
+    {
+      "id": "zuraikat2024consistency",
+      "title": "Sleep regularity and mortality: a prospective analysis in the UK Biobank",
+      "authors": "Faris M. Zuraikat, Brooke Aggarwal, Sanja Jelic, Marie-Pierre St-Onge",
+      "year": 2024,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.1093/sleep/zsad285",
+      "relevance_note": "Shows that sleep regularity index predicts all-cause and cause-specific mortality better than average sleep duration."
+    },
+    {
+      "id": "li2025regular",
+      "title": "Regular sleep patterns, not just duration, critical for mental health",
+      "authors": "Dong-Run Li, Zheng-Xuan Li, Ming-Hui Li, Bang-Quan Liu, Qian Fang, Jia-Cheng Liu, Wen-Rui Zheng, Ting-Ting Gong, Shan-Yan Gao, Qi-Jun Wu",
+      "year": 2025,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://pubmed.ncbi.nlm.nih.gov/40814280/",
+      "relevance_note": "In a large adult cohort, higher sleep regularity is associated with substantially lower depression and anxiety risk, independent of total sleep hours."
+    },
+    {
+      "id": "arshad2021adverse",
+      "title": "The adverse impact of excessive smartphone screen-time on sleep quality among young adults: A prospective cohort",
+      "authors": "Daneyal Arshad, Usaid Munir Joyia, Sadaf Fatima, Noor Khalid, Anser Ikram Rishi, Naimat Ullah Abdul Rahim, Syed Faheem Bukhari, Gulfam Khan Shairwani, Ahmed Salmaan",
+      "year": 2021,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.5935/1984-0063.20200114",
+      "relevance_note": "Prospective cohort study linking objectively measured daily smartphone screen time with higher odds of poor sleep quality (PSQI) in young adults."
+    },
+    {
+      "id": "zhang2025associations",
+      "title": "Associations of sleep pattern, sleep duration, bedtime, rising time and cardiovascular disease: Data from NHANES (2017-2020)",
+      "authors": "Xiao Zhang, Dongling Wang, Jiangang Liu",
+      "year": 2025,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.1371/journal.pone.0326499",
+      "relevance_note": "Shows dose-response associations between sleep patterns, duration, timing and cardiovascular disease risk using nationally representative US data."
+    },
+    {
+      "id": "fatemeh2021effect",
+      "title": "Effect of melatonin supplementation on sleep quality: a systematic review and meta-analysis of randomized controlled trials",
+      "authors": "Gholami Fatemeh, Moradi Sajjad, Rasaei Niluofar, Soveid Neda, Setayesh Leila, Mirzaei Khadijeh",
+      "year": 2021,
+      "source_type": "systematic review and meta-analysis",
+      "link_or_DOI": "https://doi.org/10.1093/nutrit/nuaa084",
+      "relevance_note": "Meta-analysis of randomized controlled trials indicating melatonin significantly improves sleep quality (e.g., PSQI scores) compared with control."
+    },
+    {
+      "id": "maki2025sleep",
+      "title": "Sleep regularity and duration are associated with depression severity in a nationally representative United States sample",
+      "authors": "Katherine A. Maki, Li Yang, Nicole L. Farmer, Shreya Papneja, Gwenyth R. Wallen, Jennifer L. Barb",
+      "year": 2025,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.1016/j.sleep.2024.12.027",
+      "relevance_note": "Shows that lower sleep regularity and shorter sleep are linked to higher depression scores, with stronger effects in women and those using tobacco/cannabis."
+    },
+    {
+      "id": "carney2017cognitive",
+      "title": "Cognitive Behavioral Insomnia Therapy for Those With Insomnia and Depression: A Randomized Controlled Clinical Trial",
+      "authors": "Colleen E. Carney, Jack D. Edinger, Maragatha Kuchibhatla, Angela M. Lachowski, Olya Bogouslavsky, Andrew D. Krystal, Colin M. Shapiro",
+      "year": 2017,
+      "source_type": "randomized controlled trial",
+      "link_or_DOI": "https://doi.org/10.5665/sleep.6596",
+      "relevance_note": "Randomized trial demonstrating that CBT for insomnia combined with antidepressant medication improves both objective sleep and depression outcomes in comorbid patients."
+    },
+    {
+      "id": "yin2025associations",
+      "title": "Associations Between Both Smartphone Addiction and Objectively Measured Smartphone Use and Sleep Quality and Duration Among University Students: Cross-Sectional Study",
+      "authors": "Jian Yin, Xuanyi Tang, Zeshi Liu, Yangyang Gong, Hui Yang, Yanping Zhang",
+      "year": 2025,
+      "source_type": "peer-reviewed journal article",
+      "link_or_DOI": "https://doi.org/10.2196/77796",
+      "relevance_note": "Cross-sectional study showing dose-response associations between both smartphone addiction scores and objectively measured screen time with poor sleep quality and shorter duration in university students."
+    }
+  ]

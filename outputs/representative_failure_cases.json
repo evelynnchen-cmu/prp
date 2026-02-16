@@ -1,0 +1,53 @@
+[
+  {
+    "type": "Low Citation Precision",
+    "query_id": "direct_006_cee",
+    "category": "direct",
+    "query": "Identify specific findings with quantitative evidence about how sleep duration affects physical health markers like inflammation, including citations",
+    "issue": "Citation precision: 0.75 - (dowd2011sleep, dowd2011sleep_chunk_004)",
+    "metrics": {
+      "citation_precision": 0.75,
+      "total_citations": 4,
+      "valid_citations": 3
+    },
+    "answer": "The provided evidence indicates several specific findings regarding how sleep duration affects physical health markers related to inflammation:\n\n1. **Long Sleep Duration and Inflammation**: The study found that longer sleep duration (defined as more than 8 hours) was associated with higher levels of",
+    "invalid_citations": [
+      "(dowd2011sleep, dowd2011sleep_chunk_004)"
+    ],
+    "root_cause": "Citations in answer do not match retrieved chunks"
+  },
+  {
+    "type": "Missing Citations",
+    "query_id": "edge_004",
+    "category": "edge_case",
+    "query": "What is the effect of caffeine consumption timing on sleep quality?",
+    "issue": "No citations in answer despite 5 retrieved chunks",
+    "metrics": {
+      "citation_precision": 0.0,
+      "total_citations": 0,
+      "groundedness_score": 4,
+      "answer_relevance": 4
+    },
+    "answer": "The provided evidence does not contain information about the effect of caffeine consumption timing on sleep quality. To answer this question, additional sources covering the relationship between caffeine timing and sleep quality would be needed.",
+    "root_cause": "Answer generated without citations despite having retrieved chunks"
+  },
+  {
+    "type": "Invalid Citations",
+    "query_id": "direct_010",
+    "category": "direct",
+    "query": "How effective is cognitive behavioral therapy for insomnia in patients with depression?",
+    "issue": "Citation validation failed: 1 invalid citations",
+    "metrics": {
+      "citation_precision": 0.8,
+      "total_citations": 5,
+      "invalid_citations": [
+        "(carney2017cognitive, carney2017cognitive_chunk_005)"
+      ]
+    },
+    "answer": "Cognitive Behavioral Therapy for Insomnia (CBT-I) has shown effectiveness in improving sleep in patients with comorbid major depressive disorder (MDD) and insomnia. A randomized controlled trial involving 107 participants with MDD and insomnia found that both CBT-I groups (CBT-I + antidepressant and",
+    "invalid_citations": [
+      "(carney2017cognitive, carney2017cognitive_chunk_005)"
+    ],
+    "root_cause": "Citations reference chunks not in retrieved set"
+  }
+]

@@ -1,0 +1,7 @@
+INGESTION REPORT
+================
+
+Total sources processed: 16
+Total chunks created: 525
+Average chunks per source: 32.8
+

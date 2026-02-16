@@ -1,0 +1,8 @@
+{
+  "total_queries": 20,
+  "by_category": {
+    "direct": 10,
+    "synthesis": 5,
+    "edge_case": 5
+  }
+}

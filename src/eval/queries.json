@@ -1,0 +1,168 @@
+{
+  "direct_queries": [
+    {
+      "id": "direct_001_cee",
+      "query": "What are 3 specific claims from the evidence about sleep duration affecting depression, with supporting statistics and citations?",
+      "category": "direct",
+      "phase1_task": "CEE",
+      "expected_format": "Claim-Evidence-Citation format",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_002_cee",
+      "query": "Identify specific findings about sleep quality's impact on cardiovascular health with quantitative evidence and citations",
+      "category": "direct",
+      "phase1_task": "CEE",
+      "expected_format": "Claim-Evidence-Citation format",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_003_cee",
+      "query": "What are specific claims with statistics about the relationship between sleep duration and anxiety in US adults? Include citations for each claim",
+      "category": "direct",
+      "phase1_task": "CEE",
+      "expected_format": "Claim-Evidence-Citation format",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_004_cee",
+      "query": "Extract specific quantitative findings about how sleep quality relates to mental health outcomes, with supporting statistics and citations",
+      "category": "direct",
+      "phase1_task": "CEE",
+      "expected_format": "Claim-Evidence-Citation format",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_005_cee",
+      "query": "What are the specific claims with supporting data about optimal sleep duration for cognitive performance? Include statistics and citations",
+      "category": "direct",
+      "phase1_task": "CEE",
+      "expected_format": "Claim-Evidence-Citation format",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_006_cee",
+      "query": "Identify specific findings with quantitative evidence about how sleep duration affects physical health markers like inflammation, including citations",
+      "category": "direct",
+      "phase1_task": "CEE",
+      "expected_format": "Claim-Evidence-Citation format",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_007",
+      "query": "What is the relationship between sleep regularity and mortality?",
+      "category": "direct",
+      "phase1_task": "general",
+      "expected_format": "Answer with citations",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_008",
+      "query": "How does smartphone screen time affect sleep quality?",
+      "category": "direct",
+      "phase1_task": "general",
+      "expected_format": "Answer with citations",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_009",
+      "query": "What is the effect of melatonin supplementation on sleep quality?",
+      "category": "direct",
+      "phase1_task": "general",
+      "expected_format": "Answer with citations",
+      "expected_sources": 2
+    },
+    {
+      "id": "direct_010",
+      "query": "How effective is cognitive behavioral therapy for insomnia in patients with depression?",
+      "category": "direct",
+      "phase1_task": "general",
+      "expected_format": "Answer with citations",
+      "expected_sources": 2
+    }
+  ],
+  "synthesis_queries": [
+    {
+      "id": "synth_001_css",
+      "query": "Compare what different sources say about sleep consistency vs total sleep hours - identify areas of agreement and disagreement with specific evidence from each source",
+      "category": "synthesis",
+      "phase1_task": "CSS",
+      "expected_format": "Agreement/Disagreement table with citations",
+      "expected_sources": 3
+    },
+    {
+      "id": "synth_002_css",
+      "query": "Synthesize findings across sources: do sleep interventions (CBT-I vs sleep hygiene) show different effectiveness? Where do studies agree or differ?",
+      "category": "synthesis",
+      "phase1_task": "CSS",
+      "expected_format": "Cross-source synthesis",
+      "expected_sources": 3
+    },
+    {
+      "id": "synth_003_css",
+      "query": "Compare multiple sources on whether sleep quality or sleep quantity is more important for health outcomes. Identify where sources agree and where they differ, with specific evidence from each",
+      "category": "synthesis",
+      "phase1_task": "CSS",
+      "expected_format": "Cross-source synthesis with agreement/disagreement",
+      "expected_sources": 3
+    },
+    {
+      "id": "synth_004_css",
+      "query": "Compare findings across sources about how sleep duration and sleep quality independently and jointly affect both mental and physical health. Identify areas of agreement and disagreement",
+      "category": "synthesis",
+      "phase1_task": "CSS",
+      "expected_format": "Cross-source synthesis",
+      "expected_sources": 3
+    },
+    {
+      "id": "synth_005",
+      "query": "How do lifestyle factors like screen time and exercise interact to affect sleep quality and duration?",
+      "category": "synthesis",
+      "phase1_task": "general",
+      "expected_format": "Answer with citations",
+      "expected_sources": 3
+    }
+  ],
+  "edge_case_queries": [
+    {
+      "id": "edge_001",
+      "query": "Does the corpus contain evidence about sleep's effect on immune function in adults over 60?",
+      "category": "edge_case",
+      "phase1_task": "general",
+      "expected_answer": "Should explicitly state if evidence exists or not",
+      "expected_format": "Answer with citations or explicit statement of missing evidence"
+    },
+    {
+      "id": "edge_002",
+      "query": "What is the relationship between sleep and diabetes risk?",
+      "category": "edge_case",
+      "phase1_task": "general",
+      "expected_answer": "Should explicitly state if evidence exists or not",
+      "expected_format": "Answer with citations or explicit statement of missing evidence"
+    },
+    {
+      "id": "edge_003",
+      "query": "How does chronotype (morning vs evening person) affect sleep outcomes?",
+      "category": "edge_case",
+      "phase1_task": "general",
+      "expected_answer": "Should explicitly state if evidence exists or not",
+      "expected_format": "Answer with citations or explicit statement of missing evidence"
+    },
+    {
+      "id": "edge_004",
+      "query": "What is the effect of caffeine consumption timing on sleep quality?",
+      "category": "edge_case",
+      "phase1_task": "general",
+      "expected_answer": "Should explicitly state if evidence exists or not",
+      "expected_format": "Answer with citations or explicit statement of missing evidence"
+    },
+    {
+      "id": "edge_005",
+      "query": "How does sleep affect athletic performance in professional athletes?",
+      "category": "edge_case",
+      "phase1_task": "general",
+      "expected_answer": "Should explicitly state if evidence exists or not",
+      "expected_format": "Answer with citations or explicit statement of missing evidence"
+    }
+  ]
+}
