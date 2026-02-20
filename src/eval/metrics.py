@@ -8,6 +8,8 @@ from typing import Dict, List
 from openai import OpenAI
 from dotenv import load_dotenv
 
+from src.utils.api_retry import with_retry
+
 # Load environment variables
 load_dotenv()
 
@@ -235,13 +237,15 @@ Respond in JSON format:
         prompt = self._get_evaluation_prompt(result)
         
         try:
-            response = self.client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "system", "content": "You are an expert evaluator. Respond only with valid JSON."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.1
+            response = with_retry(
+                lambda: self.client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "system", "content": "You are an expert evaluator. Respond only with valid JSON."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.1
+                )
             )
             
             response_text = response.choices[0].message.content.strip()

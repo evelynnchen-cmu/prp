@@ -3,6 +3,8 @@ import os
 from typing import List, Dict
 from dotenv import load_dotenv
 
+from src.utils.api_retry import with_retry
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -64,14 +66,16 @@ class Generator:
             chunks_formatted=chunks_formatted
         )
         
-        # Call OpenAI
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": user_prompt}
-            ],
-            temperature=self.temperature
+        # Call OpenAI (with retry on rate limit / transient errors)
+        response = with_retry(
+            lambda: self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=self.temperature
+            )
         )
         
         answer = response.choices[0].message.content
