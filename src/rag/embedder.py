@@ -8,6 +8,7 @@ class Embedder:
     def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
         self.model = SentenceTransformer(f"sentence-transformers/{model_name}")
         self.dimension = self.model.get_sentence_embedding_dimension()
+        print("Embedding model loaded.", flush=True)
         
     def embed_chunks(self, chunks: List[Dict]) -> np.ndarray:
         """

@@ -332,6 +332,7 @@ if __name__ == "__main__":
     results_df.to_csv(scores_path, index=False)
     
     # Check metrics
-    print(f"Average citation precision: {results_df['citation_precision'].mean():.2f}")
-    print(f"Total queries scored: {len(results_df)}")
-    print(f"Results saved to: {scores_path}")
+    eval_type = "enhanced" if "enhanced" in results_path else "baseline"
+    print(f"[{eval_type.upper()}] Average citation precision: {results_df['citation_precision'].mean():.2f}")
+    print(f"[{eval_type.upper()}] Total queries scored: {len(results_df)}")
+    print(f"[{eval_type.upper()}] Results saved to: {scores_path}")

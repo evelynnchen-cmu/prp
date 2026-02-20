@@ -2,7 +2,7 @@
 
 ## Phase 3: Personal Research Portal
 
-If you already have Phase 2 set up (data, vector index, and optional evaluation outputs), you can run the app immediately.
+If you just cloned this repo that already has Phase 2 set up (data, vector index, and optional evaluation outputs), you can run the app immediately.
 
 1. **One-command setup:**
    ```bash

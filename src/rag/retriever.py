@@ -8,6 +8,7 @@ class Retriever:
     def __init__(self, index_path: str, model_name: str = "all-MiniLM-L6-v2"):
         self.embedder = Embedder(model_name=model_name)
         self.store = VectorStore()
+        print("Loading vector index...", flush=True)
         self.store.load(index_path)
         
     def retrieve(self, query: str, k: int = 5) -> List[Dict]:

@@ -43,10 +43,12 @@ def run_evaluation(
         from src.rag.structured_citations import StructuredCitationGenerator
         citation_enhancer = StructuredCitationGenerator()
     
-    # Process each query
+    # Process each query (overwrite output file each run)
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     results = []
-    
+    with open(output_path, 'w') as f:
+        pass  # truncate at start so we don't append to a previous run
+
     for i, q in enumerate(queries, 1):
         print(f"\n[{i}/{len(queries)}] Processing: {q['id']}")
         
@@ -55,7 +57,7 @@ def run_evaluation(
         result['category'] = q['category']
         result['phase1_task'] = q.get('phase1_task', 'general')
         
-        # Save to file
+        # Append to file
         with open(output_path, 'a') as f:
             f.write(json.dumps(result) + '\n')
         
@@ -81,7 +83,7 @@ def run_evaluation(
     with open(summary_path, 'w') as f:
         json.dump(summary, f, indent=2)
     
-    print(f"\n✓ Evaluation complete")
+    print(f"\n✓ {eval_type.capitalize()} evaluation complete")
     print(f"  Results: {output_path}")
     print(f"  Summary: {summary_path}")
 

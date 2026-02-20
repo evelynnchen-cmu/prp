@@ -2,6 +2,8 @@ import streamlit as st
 import json
 import subprocess
 import sys
+import threading
+import time
 from pathlib import Path
 
 # Pages live in src/app/pages/ → need 4 parents to get repo root (prp)
@@ -107,33 +109,103 @@ if report:
     else:
         st.info("Failure cases file not found. Run **Re-run Evaluation** to generate it.")
 
+def _run_step_with_streaming(cmd, cwd, log_placeholder, step_label, timeout=600):
+    """Run a subprocess and stream stdout/stderr into the given placeholder.
+    Returns (returncode, full_output, timed_out)."""
+    full_output = [f"===== {step_label} =====\n"]
+    log_placeholder.code("".join(full_output), language=None)
+    proc = subprocess.Popen(
+        cmd,
+        cwd=cwd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        bufsize=1,
+    )
+    timed_out = threading.Event()
+
+    def kill_after_timeout():
+        time.sleep(timeout)
+        if proc.poll() is None:
+            timed_out.set()
+            proc.kill()
+
+    timer = threading.Thread(target=kill_after_timeout, daemon=True)
+    timer.start()
+    try:
+        for line in iter(proc.stdout.readline, ""):
+            if timed_out.is_set():
+                break
+            full_output.append(line)
+            # Keep last ~50 lines visible; always show step banner at top
+            display = full_output[0] + "".join(full_output[1:][-49:])
+            log_placeholder.code(display, language=None)
+    except Exception:
+        proc.kill()
+        proc.wait()
+        raise
+    proc.wait()
+    return proc.returncode, "".join(full_output), timed_out.is_set()
+
+
 # Task 7.5: Re-run Evaluation button (required)
 st.divider()
 st.subheader("Re-run evaluation")
+run_baseline = st.checkbox("Run baseline evaluation", value=True, key="eval_run_baseline")
+run_enhanced = st.checkbox("Run enhanced evaluation", value=True, key="eval_run_enhanced")
+if not run_baseline and not run_enhanced:
+    st.caption("Select at least one of baseline or enhanced to run.")
+else:
+    steps_preview = []
+    if run_baseline:
+        steps_preview.extend(["Baseline eval", "Baseline metrics"])
+    if run_enhanced:
+        steps_preview.extend(["Enhanced eval", "Enhanced metrics"])
+    if run_baseline and run_enhanced:
+        steps_preview.append("Compare & report")
+    st.caption(f"This run will execute: **{' → '.join(steps_preview)}**")
 if st.button("Re-run Evaluation"):
-    progress = st.progress(0, text="Running evaluation…")
-    cwd = str(repo_root)
-    steps = [
-        (["python", "-m", "src.eval.run_eval"], "Baseline eval"),
-        (["python", "-m", "src.eval.metrics", "outputs/baseline_eval_results.jsonl"], "Baseline metrics"),
-        (["python", "-m", "src.eval.run_eval", "--enhanced"], "Enhanced eval"),
-        (["python", "-m", "src.eval.metrics", "outputs/enhanced_eval_results.jsonl"], "Enhanced metrics"),
-        (["python", "-m", "src.eval.compare_baseline_enhanced"], "Compare & report"),
-    ]
-    try:
-        for i, (cmd, label) in enumerate(steps):
-            progress.progress((i + 1) / len(steps), text=label + "…")
-            r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=600)
-            if r.returncode != 0:
-                st.error(f"Step failed: {label}\n{r.stderr or r.stdout}")
-                progress.empty()
-                st.stop()
-        progress.progress(1.0, text="Done.")
-        st.success("Evaluation complete. Refreshing…")
-        st.rerun()
-    except subprocess.TimeoutExpired:
-        st.error("Evaluation timed out.")
-    except Exception as e:
-        st.error(str(e))
-    finally:
-        progress.empty()
+    if not run_baseline and not run_enhanced:
+        st.warning("Select at least one: baseline or enhanced.")
+    else:
+        progress = st.progress(0, text="Running evaluation…")
+        log_placeholder = st.empty()
+        log_placeholder.code("(waiting for output…)", language=None)
+        cwd = str(repo_root)
+        steps = []
+        if run_baseline:
+            steps.extend([
+                (["python", "-m", "src.eval.run_eval"], "Baseline eval"),
+                (["python", "-m", "src.eval.metrics", "outputs/baseline_eval_results.jsonl"], "Baseline metrics"),
+            ])
+        if run_enhanced:
+            steps.extend([
+                (["python", "-m", "src.eval.run_eval", "--enhanced"], "Enhanced eval"),
+                (["python", "-m", "src.eval.metrics", "outputs/enhanced_eval_results.jsonl"], "Enhanced metrics"),
+            ])
+        if run_baseline and run_enhanced:
+            steps.append((["python", "-m", "src.eval.compare_baseline_enhanced"], "Compare & report"))
+        try:
+            for i, (cmd, label) in enumerate(steps):
+                progress.progress((i + 1) / len(steps), text=label + "…")
+                returncode, output, step_timed_out = _run_step_with_streaming(cmd, cwd, log_placeholder, label, timeout=600)
+                if step_timed_out:
+                    st.error(f"Step timed out after 10 minutes: {label}\n{output}")
+                    progress.empty()
+                    log_placeholder.empty()
+                    st.stop()
+                if returncode != 0:
+                    st.error(f"Step failed: {label}\n{output}")
+                    progress.empty()
+                    log_placeholder.empty()
+                    st.stop()
+            progress.progress(1.0, text="Done.")
+            log_placeholder.code("(evaluation complete)", language=None)
+            st.success("Evaluation complete. Refreshing…")
+            st.rerun()
+        except subprocess.TimeoutExpired:
+            st.error("Evaluation timed out.")
+        except Exception as e:
+            st.error(str(e))
+        finally:
+            progress.empty()

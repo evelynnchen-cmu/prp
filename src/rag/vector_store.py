@@ -62,6 +62,7 @@ class VectorStore:
     
     def load(self, path: str):
         """Load index and metadata from disk"""
+        print("Loading vector index from disk (this may take a moment)...", flush=True)
         # Load FAISS index
         self.index = faiss.read_index(f"{path}/faiss.index")
         self.dimension = self.index.d
