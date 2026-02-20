@@ -1,6 +1,29 @@
-# Sleep & Well-being Research Portal - Phase 2
+# Sleep & Well-being Research Portal
 
-## Quick Start (5 minutes)
+## Phase 3: Personal Research Portal
+
+If you already have Phase 2 set up (data, vector index, and optional evaluation outputs), you can run the app immediately.
+
+1. **One-command setup:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **One-command launch:**
+   ```bash
+   ./run_app.sh
+   ```
+   Or: `streamlit run src/app/main.py`
+
+3. **Set API key** (if not already): create a `.env` file with `OPENAI_API_KEY=your_key_here`, or export it.
+
+**Requirements:** Phase 2 `data/` (including `data/data_manifest.json` and `data/processed/vector_index/`) must be present. No need to re-run ingestion or index build if already done. For the Evaluation page to show metrics, either run evaluation first (see Evaluation section below) or click **Re-run Evaluation** in the app.
+
+**Logs (machine-readable):** Phase 2 evaluation runs and app Search queries log to **`logs/query_logs.jsonl`** (JSONL, one entry per query).
+
+---
+
+## Phase 2 Quick Start (5 minutes)
 
 1. **Install dependencies:**
    ```bash
@@ -50,31 +73,41 @@
 │   ├── processed/              # Parsed text, chunks, vector index
 │   │   ├── *.txt               # Processed text files
 │   │   ├── chunks.jsonl        # All chunks (525 total)
-│   │   └── vector_index/        # FAISS index + metadata
-│   ├── data_manifest.json      # Source metadata (JSON format)
-│   └── data_manifest.csv       # Source metadata (CSV format)
+│   │   └── vector_index/       # FAISS index + metadata
+│   └── data_manifest.json      # Source metadata (JSON format)
 ├── src/
+│   ├── app/                    # Phase 3 Streamlit portal
+│   │   ├── main.py             # App entrypoint
+│   │   ├── utils.py            # load_manifest, run_query, save/load threads
+│   │   ├── artifact_generator.py  # Evidence table (generate + export CSV/MD/PDF)
+│   │   └── pages/
+│   │       ├── 1_Search.py    # Search, citations, thread save, Generate Evidence Table
+│   │       ├── 2_History.py    # Saved threads, Generate Artifact → Artifacts
+│   │       ├── 3_Artifacts.py  # Evidence table + CSV/Markdown/PDF download
+│   │       └── 4_Evaluation.py # Metrics, comparison, failure cases, Re-run Evaluation
 │   ├── ingest/                 # PDF parsing & chunking
 │   │   ├── pdf_parser.py       # PDF text extraction
 │   │   ├── chunker.py          # Token-based chunking (512 tokens, 128 overlap)
 │   │   └── pipeline.py         # Complete ingestion pipeline
-│   ├── rag/                     # Retrieval & generation
+│   ├── rag/                    # Retrieval & generation
 │   │   ├── embedder.py         # Sentence transformer embeddings
 │   │   ├── vector_store.py     # FAISS vector store
 │   │   ├── build_index.py      # Index building pipeline
 │   │   ├── retriever.py        # Dense (vector) retriever
-│   │   ├── generator.py         # LLM answer generation with citations
+│   │   ├── generator.py        # LLM answer generation with citations
 │   │   ├── structured_citations.py  # Structured citations enhancement
 │   │   ├── pipeline.py         # Complete RAG pipeline
 │   │   └── logger.py           # Query logging system
-│   └── eval/                    # Evaluation queries & metrics
+│   └── eval/                   # Evaluation queries & metrics
 │       ├── queries.json        # 20 evaluation queries (CEE, CSS, general)
 │       ├── run_eval.py         # Run evaluation on all queries
-│       ├── metrics.py          # LLM-based evaluation metrics
+│       ├── metrics.py         # LLM-based evaluation metrics
 │       └── compare_baseline_enhanced.py  # Comparison script
+├── threads/
+│   └── threads.jsonl           # Saved research threads (Phase 3, created on first save)
 ├── logs/
-│   └── query_logs.jsonl        # All queries logged (JSONL format)
-├── outputs/                     # Evaluation results
+│   └── query_logs.jsonl        # Machine-readable logs: all queries (eval + app Search)
+├── outputs/                    # Evaluation results + generated artifacts
 │   ├── baseline_eval_results.jsonl
 │   ├── baseline_eval_scores.csv
 │   ├── baseline_eval_summary.json
@@ -83,9 +116,13 @@
 │   ├── enhanced_eval_summary.json
 │   ├── baseline_enhanced_comparison.csv
 │   ├── eval_report_data.json
-│   └── representative_failure_cases.json
+│   ├── representative_failure_cases.json
+│   └── artifacts/              # Exported evidence tables (CSV, MD, PDF; timestamped)
+├── run_app.sh                  # One-command launch for Phase 3 app
 └── requirements.txt
 ```
+
+**Logs:** `logs/query_logs.jsonl` contains machine-readable JSONL entries for every query (Phase 2 evaluation runs and Phase 3 Search). Commit this file so graders can inspect evaluated runs.
 
 ## System Overview
 
@@ -410,6 +447,8 @@ See `requirements.txt`:
 - python-dotenv - Environment variables
 - openai - LLM API
 - tiktoken - Tokenization
+- streamlit - Phase 3 web app
+- reportlab - PDF export for evidence tables
 
 All tools are free/open-source except OpenAI API (requires API key).
 

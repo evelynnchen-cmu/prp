@@ -6,3 +6,5 @@ numpy
 python-dotenv
 openai
 tiktoken
+streamlit>=1.32.0
+reportlab>=4.0.0
